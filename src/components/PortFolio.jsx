@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineFileText, AiOutlineCode, AiOutlineDashboard } from "react-icons/ai";
 import ipl from "/src/Ipl-Wallpaper-3-e1641279556700.jpg"; // ✅ Changed path to `src`
 import python from "../../src/python.webp";
-import Zomato from "/src/Zomato.jpg";
+import Zomato from "/src/zomato.jpg";
 import express from "../../src/express.png";
 import reactjs from "../../src/reactjs.png";
 import nodejs from "../../src/node.png";
