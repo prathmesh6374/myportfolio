@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineFileText, AiOutlineCode, AiOutlineDashboard } from "react-icons/ai";
-import ipl from "/src/Ipl-Wallpaper-3-e1641279556700.jpg"; // ✅ Changed path to `src`
+import ipl from "/src/Ipl-Wallpaper-3-e1641279556700.jpg";
 import python from "../../src/python.webp";
 import Zomato from "/src/zomato.jpg";
 import express from "../../src/express.png";
@@ -77,10 +77,6 @@ function PortFolio() {
     setCurrentContent({ type: "", src: "" });
   };
 
-  const openDashboard = (url) => {
-    window.open(url, "_blank"); // ✅ Open dashboard in a new tab
-  };
-
   return (
     <div name="Portfolio" className="max-w-screen-2xl container mx-auto px-4 md:px-8 my-10">
       <div>
@@ -101,7 +97,7 @@ function PortFolio() {
                   <AiOutlineCode className="mr-2" size={20} />
                   <a href={sc} target="_blank" rel="noopener noreferrer">Source Code</a>
                 </button>
-                <button onClick={() => openDashboard(dashboard)} className="flex items-center justify-center bg-yellow-500 hover:bg-yellow-700 text-white font-bold px-4 py-2 rounded transition duration-300">
+                <button onClick={() => openModal("iframe", dashboard)} className="flex items-center justify-center bg-yellow-500 hover:bg-yellow-700 text-white font-bold px-4 py-2 rounded transition duration-300">
                   <AiOutlineDashboard className="mr-2" size={20} />
                   Dashboard
                 </button>
@@ -114,7 +110,7 @@ function PortFolio() {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex items-center justify-center z-50">
-          <div className="relative w-[80%] h-[60%] bg-white flex items-center justify-center rounded-lg shadow-lg overflow-hidden">
+          <div className="relative w-[90%] h-[75%] bg-white flex items-center justify-center rounded-lg shadow-lg overflow-hidden">
             <button onClick={closeModal} className="absolute top-4 right-4 bg-red-500 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl font-bold shadow-lg transition duration-300">
               ✖
             </button>
