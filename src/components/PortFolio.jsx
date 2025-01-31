@@ -35,7 +35,7 @@ function PortFolio() {
       logo: express,
       name: "Express",
       video: "https://www.youtube.com/embed/example-video",
-      dashboard: "https://1drv.ms/u/s!Ara0vL8Zkz99kyO31YwDJ6dAWUQi?e=LAR1c5",
+      dashboard: "https://app.powerbi.com/reportEmbed?reportId=a2a422ab-30b9-49f2-979c-22461d82b525&autoAuth=true&ctid=140fbbcf-ffac-45ac-baf2-b05700941b6b",
     },
     {
       id: 3,
@@ -118,7 +118,13 @@ function PortFolio() {
               <iframe src={currentContent.src} title="Explanation Video" className="w-full h-full" allowFullScreen></iframe>
             )}
             {currentContent.type === "iframe" && (
-              <iframe src={currentContent.src} title="Dashboard" className="w-full h-full" frameBorder="0"></iframe>
+              <iframe
+                src={currentContent.src}
+                title="Dashboard"
+                className="w-full h-full"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
             )}
           </div>
         </div>
